@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Page Title</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head> 
+<body> 
+
+<!-- Start of first page -->
+<div data-role="page" id="foo">
+
+	<div data-role="header">
+		<h1>Foo (First Page)</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>I'm first in the source order so I'm shown as the page. </p>		
+		<p>View internal page called <a href="#bar">bar</a> </p>	
+		<p>
+			<a href="#bar" data-transition="pop">I'll pop</a>
+		</p>
+		<p>
+		<a href="#bar" data-transition="slide">I'll slide</a>
+		</p>
+		<img src="meatwork.jpg" alt="Meatwork" style="width:auto;height:auto">
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of second page -->
+<div data-role="page" id="bar">
+
+	<div data-role="header">
+		<h1>Bar ((Second page)</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>		
+		<p>
+			<a href="#foo" data-transition="slide" data-direction="reverse">Back to foo, in reverse</a>
+		</p>
+		<p>
+			<ul data-role="listview">
+				<li><a href="#foo">foo (first page)</a></li>
+				<li><a href="#bar">bar (second page)</a></li>
+				<li><a href="#third">Third Page</a></li>
+			</ul>
+		</p>	
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of third page -->
+<div data-role="page" id="third">
+
+	<div data-role="header">
+		<h1>Third page</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>I'm the third in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>		
+		<p>
+			<a href="#foo" data-transition="slide" data-direction="reverse">Back to foo, in reverse</a>
+		<\p>
+		<p "Nothing else, really, here" >
+		<p>
+			<ul data-role="listview">
+				<li><a href="#foo">foo (first page)</a></li>
+				<li><a href="#bar">bar (second page)</a></li>
+				<li><a href="#third">Third Page</a></li>
+			</ul>
+		</p>	
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>
